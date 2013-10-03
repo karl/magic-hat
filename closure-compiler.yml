@@ -1,0 +1,16 @@
+js:
+  - scripts-lib/jquery-1.6.4.js
+  - scripts-lib/underscore.js
+  - scripts-lib/backbone.js
+
+  - scripts/Main.js
+
+js_output_file: app.js
+
+# compilation_level: SIMPLE_OPTIMIZATIONS
+compilation_level: WHITESPACE_ONLY
+formatting: pretty_print
+
+summary_detail_level: 3
+
+# warning_level: VERBOSE
