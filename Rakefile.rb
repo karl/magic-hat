@@ -51,6 +51,9 @@ def deploy_to(env)
   # Upload new version
   scp ".", "#{env[:dir]}-upload", host, :excludes => [".git"]
 
+  # Remove any uploaded groups
+  ssh "rm -r '#{env[:dir]}-upload'/groups/*.json", host, :ignore_failure => true
+
   # Copy groups from live deployment
   ssh "cp -R '#{env[:dir]}/groups' '#{env[:dir]}-upload/'", host, :ignore_failure => true
 
