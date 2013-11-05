@@ -1,20 +1,21 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-    <title><?= __($group['name']) ?></title> 
+<!DOCTYPE html>
+<html>
+<head>
+    <title><?= __($group['name']) ?></title>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="styles/main.css" rel="stylesheet" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-</head> 
-<body> 
+</head>
+<body>
 
-<div id="player"> 
+<div id="player">
 
   <h1><?= __($group['name']) ?></h1>
 
-  <? $width = 100 / count($group['lists']); ?>
+  <? $width = 100 / max(count($group['lists']), 1); ?>
 
   <table class="results-container">
     <tr>
@@ -47,7 +48,7 @@
     </tr>
   </table>
 
-  <button class="button" id="chooser"><img src="images/media-shuffle.png" alt="choose" /></button>
+  <button class="btn btn-lg btn-primary center-block" id="chooser"><img src="images/media-shuffle.png" alt="choose" /></button>
 
 </div>
 
@@ -60,5 +61,5 @@ MH.group = <?= $json ?>;
 <script src="app.js"></script>
 
 
-</body> 
+</body>
 </html>

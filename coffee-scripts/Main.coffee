@@ -55,7 +55,7 @@ display_person = (results_el, person) ->
   $('.person.displayed', results_el).removeClass('displayed')
   $(".person-#{person.id}", results_el).addClass('displayed')
 
-$('#chooser').addClass('disabled').attr('disabled': true) if group?.lists.length is 0
+$('#chooser').attr('disabled': true) if group?.lists.length is 0
 
 $('#chooser').click ->
   $('.displayed').removeClass('displayed')
@@ -72,7 +72,7 @@ add_list = ->
   list_el = $("""
     <td>
       <div class="people-field-container">
-        <textarea class="people-field" name="list-#{index - 1}" placeholder="Names"></textarea>
+        <textarea class="people-field form-control input-lg" name="list-#{index - 1}" placeholder="Names"></textarea>
       </div>
     </td>
   """)

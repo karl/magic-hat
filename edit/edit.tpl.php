@@ -1,18 +1,19 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-    <title><?= $group['name'] == null ? 'Create' : 'Edit: ' . __($group['name']) ?></title> 
+<!DOCTYPE html>
+<html>
+<head>
+    <title><?= $group['name'] == null ? 'Create' : 'Edit: ' . __($group['name']) ?></title>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="../styles/main.css" rel="stylesheet" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-</head> 
-<body> 
+</head>
+<body>
 
-<div id="page"> 
+<div id="page">
 
-  <a id="back" class="small-button" href="../">◄ Group List</a>
+  <a id="back" class="btn btn-default" href="../">◄ Group List</a>
 
   <h1><?= $group['name'] == null ? 'Create' : 'Editing' ?></h1>
 
@@ -25,18 +26,18 @@
   <form id="content" method="post">
 
     <div id="name-field-container">
-      <input id="name-field" name="name" placeholder="Group Name" value="<?= __($group['name']) ?>" />
+      <input id="name-field" class="form-control input-lg" name="name" placeholder="Group Name" value="<?= __($group['name']) ?>" />
     </div>
 
-    <? $width = 100 / count($group['lists']); ?>
+    <? $width = 100 / max(count($group['lists']), 1); ?>
     <table class="lists-container">
       <tr>
 
         <? foreach($group['lists'] as $index => $list) { ?>
         <td width="<?= $width ?>%">
-          
+
               <div class="people-field-container">
-<textarea class="people-field" name="list-<?= $index ?>" placeholder="Names">
+<textarea class="people-field form-control input-lg" name="list-<?= $index ?>" placeholder="Names">
 <? foreach($list as $person) { ?>
 <?= __($person['name']) ?>
 
@@ -55,10 +56,10 @@
       <label for="showImages"> Show Robot Images</label>
     </div>
 
-    <input type="submit" value="Save" class="button" />
+    <input type="submit" value="Save" class="btn btn-lg btn-primary center-block" />
 
-    <a href="#" class="small-button" id="add-list">+</a>
-    <a href="#" class="small-button" id="remove-list">-</a>
+    <a href="#" class="btn btn-default" id="add-list">+</a>
+    <a href="#" class="btn btn-default" id="remove-list">-</a>
 
   </form>
 
@@ -66,5 +67,5 @@
 
 <script src="../app.js"></script>
 
-</body> 
+</body>
 </html>

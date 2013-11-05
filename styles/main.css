@@ -1,16 +1,9 @@
-html, body {
-	font-family: Tahoma, sans-serif;
-	margin: 0;
-	padding: 0;
-    background: url(../images/leather_1.png);
-}
-
 h1 {
 	text-align: center;
 	margin: 0;
 	padding: 0;
 	font-size: 3em;
-	color: #d62;
+	color: #7c4199;
 	margin-top: 2em;
 }
 
@@ -37,13 +30,13 @@ h1 {
 .people {
     margin: 0;
     padding: 0;
-}    
+}
 
 .people li {
     list-style: none;
     margin: 0;
     padding: 0.2em;
-    font-size: 3em;    
+    font-size: 3em;
     display: none;
 }
 
@@ -57,40 +50,15 @@ h1 {
 
 .no-one {
     padding: 0.2em;
-    font-size: 3em;    
+    font-size: 3em;
     color: #eea77f;
     opacity: 0.5;
     font-style: italic;
 }
 
-.button {
-    display: block;
-	margin: 0 auto;
-	margin-top: 2em;
-	width: 20%;
-	border: 1px solid #b42;
-	background: #d62;
-	text-align: center;
-	padding: 0.5em;
-	color: #fff;
-	font-weight: bold;
-	font-size: 1.2em;
-	cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.button:hover {
-	border: 1px solid #c53;
-	background: #e73;
-}
-
-.button.disabled,
-.button.disabled:hover {
-    opacity: 0.5;
-    border: 1px solid #b42;
-    background: #d62;
-    cursor: default;
+#chooser {
+    width: 90%;
+    max-width: 300px;
 }
 
 #chooser img {
@@ -120,42 +88,32 @@ h1 {
 }
 
 .edit-button {
-    text-decoration: none;
     font-size: 0.8em;
     color: #aaa;
 }
 
-.people-field-container {
-    margin-right: 1em;
-    font-size: 1.4em;
-}
-
 .people-field {
-    border: none;
-    padding: 0.5em;
-    width: 100%;
-    height: 20em;
-    font-size: 1em;
+    height: 20em !important;
 }
 
 #add-list {
     position: absolute;
     right: 35px;
     top: 110px;
-    width: 15px;
+    width: 35px;
 }
 
 #remove-list {
     position: absolute;
     right: 35px;
     top: 150px;
-    width: 15px;
+    width: 35px;
 }
 
 .small-button {
     text-align: center;
     border: 1px solid #b42;
-    background: #d62;
+    background: #7c4199;
     padding: 0.4em;
     color: #fff;
     cursor: pointer;
@@ -170,16 +128,8 @@ h1 {
 
 
 #name-field-container {
-    margin-right: 1em;
     font-size: 1.4em;
     margin-bottom: 1em;
-}
-
-#name-field {
-    border: none;
-    padding: 0.5em;
-    width: 100%;
-    font-size: 1em;
 }
 
 #message {
