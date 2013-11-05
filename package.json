@@ -1,0 +1,8 @@
+{
+  "name": "magic-hat",
+  "version": "1.0.0",
+  "dependencies": {
+    "uglify-js": "2.x.x",
+    "coffee-script": "1.x.x"
+  }
+}

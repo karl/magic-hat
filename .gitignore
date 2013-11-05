@@ -1,2 +1,5 @@
 groups/*.json
 scripts/*.js
+/node_modules/
+
+/app.js

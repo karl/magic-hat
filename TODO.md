@@ -1,7 +1,6 @@
 TODO
 ====
 
-* Automated deploys.
 * Sort group list alphabetically.
 * Email groups backup.
 * Unicornify.
