@@ -2,6 +2,7 @@ TODO
 ====
 
 * Automated deploys.
+* Sort group list alphabetically.
 * Email groups backup.
 * Unicornify.
 * Bootstrap 3 styling.
