@@ -6,14 +6,16 @@ choosing_timeout = null
 delay = null
 shuffled_people = null
 index = null
+loop_count = null
 
 choose_name = (results_index) ->
-  delay = 1
+  delay = 10
+  loop_count = 0
   shuffled_people = _.shuffle group.lists[results_index]
   index = 0
 
   results_el = $("#result-#{results_index}")
-  $('.no-one', results_el).hide() 
+  $('.no-one', results_el).hide()
   $('.person.displayed', results_el).removeClass('displayed')
   $('.person.choosen', results_el).removeClass('choosen')
 
@@ -21,13 +23,15 @@ choose_name = (results_index) ->
     setTimeout ->
       choose_name results_index + 1 if results_index + 1 < group.lists.length
     , 500
-  
+
 tick = (results_el, callback) ->
   display_person results_el, next_person()
 
-  delay *= 1.3
-  if delay > limit  
-    highlight_choice results_el  
+  delay *= 1.1 if loop_count is 1 and delay < 50
+  delay *= 1.3 if loop_count >= 2
+
+  if delay > limit
+    highlight_choice results_el
     callback()
     return
 
@@ -41,7 +45,10 @@ highlight_choice = (results_el) ->
 
 next_person = ->
   index += 1
-  index = 0 if index >= shuffled_people.length
+  if index >= shuffled_people.length
+    index = 0
+    loop_count += 1
+    shuffled_people = _.shuffle shuffled_people
   shuffled_people[index]
 
 display_person = (results_el, person) ->
@@ -50,9 +57,9 @@ display_person = (results_el, person) ->
 
 $('#chooser').addClass('disabled').attr('disabled': true) if group?.lists.length is 0
 
-$('#chooser').click -> 
-  $('.displayed').removeClass('displayed') 
-  $('.no-one').show() 
+$('#chooser').click ->
+  $('.displayed').removeClass('displayed')
+  $('.no-one').show()
   choose_name(0)
 
 
