@@ -41,7 +41,9 @@ if (isset($_GET['group'])) {
           }
       }
       closedir($handle);
-  }  
+  }
+
+  natsort($groups);
 
   $json = json_encode($groups);
 
