@@ -22,8 +22,8 @@
       <ul id="groups">
         <? foreach($groups as $group) {?>
           <li class="group">
-            <a href="<?= __($group) ?>"><?= __($group) ?></a>
-            <a href="edit/<?= __($group) ?>" class="edit-button">edit</a>
+            <a href="<?= __(urlencode($group)) ?>"><?= __($group) ?></a>
+            <a href="edit/<?= __(urlencode($group)) ?>" class="edit-button">edit</a>
           </li>
         <? } ?>
       </ul>
