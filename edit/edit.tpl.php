@@ -18,9 +18,9 @@
   <h1><?= $group['name'] == null ? 'Create' : 'Editing' ?></h1>
 
   <? if ($saved === "success") { ?>
-    <div id="message">Group saved</div>
+    <div id="message" class="alert alert-success">Group saved</div>
   <? } else if ($saved === "failed") { ?>
-    <div id="message" class="error">Error saving group</div>
+    <div id="message" class="alert alert-danger">Error saving group</div>
   <? } ?>
 
   <form id="content" method="post">

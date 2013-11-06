@@ -51,7 +51,6 @@ h1 {
 .no-one {
     padding: 0.2em;
     font-size: 3em;
-    color: #eea77f;
     opacity: 0.5;
     font-style: italic;
 }
@@ -126,26 +125,15 @@ h1 {
     background: #e73;
 }
 
+#message {
+    width: 40%;
+    margin: 10px auto;
+    text-align: center;
+}
 
 #name-field-container {
     font-size: 1.4em;
     margin-bottom: 1em;
-}
-
-#message {
-    margin: 0.5em auto;
-    width: 40%;
-    background: #eea77f;
-    color: #903b0b;
-    padding: 0.5em;
-    font-size: 1.2em;
-    text-align: center;
-    border-radius: 15px;
-}
-
-#message.error {
-    background: #ce2042;
-    color: #fff;
 }
 
 #back {
